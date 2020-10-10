@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="Bienvenidos">
+<head>
+    <meta charset="utf-8">
+	<title>Ejemplo #2 </title>
+</head>
+<body>
+    <!--dobles llaves encierran expresiones que se ejecutan en tiempo de ejecución, permite mostrar contenido dinámico-->
+    <h1>{{'primera app en AngularJS' |uppercase}}</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js">   
+    </script>
+    <script> 
+        <!--se guarda el módulo en una variable-->
+        var  mi_var = angular.module('Bienvenidos', []);
+    </script>
+</body>
+</html>

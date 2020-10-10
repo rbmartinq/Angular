@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Creando directiva</title>
+</head>
+<body ng-app="directivas">
+    <sujeto nombre="Robinson" apellido="Martinez"></sujeto>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js">  </script>
+        <script>
+            var directiva1 = angular.module('directivas',[]);
+            directiva1.directive('sujeto', function(){
+            var valor = {};
+                valor.scope ={
+                    nombres: '@nombre',
+                    apellidos: '@apellido'
+                }
+            valor.restrict ='E';
+            valor.template = "Buenos días {{nombres}} {{apellidos}}!";
+            return valor;
+            });
+        </script>
+</body>
+</html>
